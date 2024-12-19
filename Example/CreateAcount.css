@@ -1,0 +1,16 @@
+#form{
+    width: 400px;
+    height: 500px;
+    background-color: aquamarine;
+}
+.h3{
+    text-align: center;
+    background-color: lightcoral;
+}
+.name1{
+    color: blue;
+}
+.name2{
+    color: blue;
+    text-align: end;
+}
