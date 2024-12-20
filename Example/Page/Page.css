@@ -1,45 +1,51 @@
-.page{
-    background-color: antiquewhite;
-    height:fit-content;
-    display: flex;
-    flex-direction: row;
+.page {
+  background-color: antiquewhite;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
 }
-.content{
-    background-color: aqua;
-    width: 1400px;
-    height: 600px;
-    margin-left: 50px;
-    margin-top: 20px;
+.content {
+  background-color: aqua;
+  width: 1400px;
+  height: 600px;
+  margin-left: 50px;
+  margin-top: 20px;
 }
-.Header{
-    width: 1400px;
-    height: 30px;
-    background-color: palevioletred;
+.Header {
+  width: 1400px;
+  height: 30px;
+  background-color: palevioletred;
 }
-.footter{
-    background-color: blue;
-    
-    width: 1400px;
-    height: 30px;
+.footter {
+  background-color: blue;
+  width: 1400px;
+  height: 30px;
 }
-.entry1{
-    background-color: black;
-    color: aliceblue;
-    height: 30px;
-    width: 600px;
-    flex: content;
+.entry1 {
+  background-color: black;
+  color: aliceblue;
+  height: 30px;
+  width: 600px;
+  flex: content;
 }
-.entry2{
-    background-color: black;
-    color: aliceblue;
-    height: 30px;
-    width: 600px;
-    flex: content;
+.entry2 {
+  background-color: black;
+  color: aliceblue;
+  height: 30px;
+  width: 600px;
+  flex: content;
 }
-.entry3{
-    background-color: black;
-    color: aliceblue;
-    height: 30px;
-    width: 600px;
-    flex: content;
+.entry3 {
+  background-color: black;
+  color: aliceblue;
+  height: 30px;
+  width: 600px;
+  flex: content;
+}
+.sidebar {
+  background-color: black;
+  color: aliceblue;
+  height: 300px;
+  width: 200px;
+  flex: content;
 }
