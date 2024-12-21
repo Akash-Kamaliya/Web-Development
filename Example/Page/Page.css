@@ -2,7 +2,6 @@
   background-color: antiquewhite;
   height: fit-content;
   display: flex;
-  flex-direction: row;
 }
 .content {
   background-color: aqua;
@@ -20,32 +19,43 @@
   background-color: blue;
   width: 1400px;
   height: 30px;
+  position: absolute;
+  top: 597px;
+  color: antiquewhite;
 }
 .entry1 {
   background-color: black;
   color: aliceblue;
   height: 30px;
   width: 600px;
-  flex: content;
+  position: absolute;
+  top: 140px;
+  left: 120px;
 }
 .entry2 {
   background-color: black;
   color: aliceblue;
   height: 30px;
   width: 600px;
-  flex: content;
+  position: absolute;
+  top: 200px;
+  left: 120px;
 }
 .entry3 {
   background-color: black;
   color: aliceblue;
   height: 30px;
   width: 600px;
-  flex: content;
+  position: absolute;
+  top: 260px;
+  left: 120px;
 }
 .sidebar {
   background-color: black;
   color: aliceblue;
   height: 300px;
-  width: 200px;
-  flex: content;
+  width: 500px;
+  position: absolute;
+  left: 900px;
+  top:140px
 }
