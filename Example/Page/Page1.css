@@ -1,0 +1,15 @@
+.photo{
+    height: 51px;
+}
+.navbar{
+    height: 51px;
+    position: absolute;
+    left: 1000px;
+    width: 700px;
+    font-size: large;
+}
+.nav{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
