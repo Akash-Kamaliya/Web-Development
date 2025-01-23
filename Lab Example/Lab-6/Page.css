@@ -1,61 +1,51 @@
-.page {
-  background-color: antiquewhite;
-  height: fit-content;
-  display: flex;
+*{
+    margin: 0;
+    padding: 0;
 }
-.content {
-  background-color: aqua;
-  width: 1400px;
-  height: 600px;
-  margin-left: 50px;
-  margin-top: 20px;
+
+.page{
+    background-color: orange;
+    height: 80vh;
+    margin: 0px 20px 0px 20px;
 }
 .Header {
-  width: 1400px;
-  height: 30px;
-  background-color: palevioletred;
+    background-color: purple;
+    height: 30px;
+    margin: 0px 20px 0px 20px;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
 }
-.footter {
-  background-color: blue;
-  width: 1400px;
-  height: 30px;
-  position: absolute;
-  top: 597px;
-  color: antiquewhite;
+.footter{
+    background-color: blue;
+    height: 30px;
+    margin: 0px 20px 0px 20px;
+    color: white;
+    padding: 5px;
+    font-size: 20px;
 }
-.entry1 {
-  background-color: black;
-  color: aliceblue;
-  height: 30px;
-  width: 600px;
-  position: absolute;
-  top: 140px;
-  left: 120px;
+p{
+    margin-left: 20px;
+    font-size: 20px;
 }
-.entry2 {
-  background-color: black;
-  color: aliceblue;
-  height: 30px;
-  width: 600px;
-  position: absolute;
-  top: 200px;
-  left: 120px;
+.entry{
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin: 20px;
+    height: 35px;
+    font-size: 20px;
 }
-.entry3 {
-  background-color: black;
-  color: aliceblue;
-  height: 30px;
-  width: 600px;
-  position: absolute;
-  top: 260px;
-  left: 120px;
+.sidebar{
+    height: 200px;
+    background-color: black;
+    color: white;
+    width: 30%;
+    float: right;
+    margin: 20px;
+    font-size: 20px;
 }
-.sidebar {
-  background-color: black;
-  color: aliceblue;
-  height: 300px;
-  width: 500px;
-  position: absolute;
-  left: 900px;
-  top:140px
+.content{
+    width: 50%;
+    float: left;
 }

@@ -21,6 +21,7 @@
     justify-content: space-between;
     border: 2px solid black;
 }
+
 .nav{
     color: black;
     text-decoration: none;
@@ -34,7 +35,7 @@
     margin-left: 0 ;
 }
 .sidebar{
-    background-color: rgb(160,160,160);
+    background-color:red;
     width: 20%;
     height: 34.5rem,;
     border-right: 2px solid black;
@@ -45,7 +46,8 @@
     align-items: center;
 }
 .footer { 
-    background-color: lightseagreen;
+    background-color: blue;
+    color: white;
     width: 100%;
     height: 8%;
     border: 2px solid black;
@@ -55,22 +57,29 @@
     justify-content: space-around;
 }
 .main{
-    background-color: wheat;
+    background-color: white;
     width: 80%;
     height: 34.5rem;
-    border-right: 2px solid black;
     overflow: scroll;
-    display: flex;
-    flex-wrap: wrap;
-
 }
 .ak { 
     display: flex;
 }
+.name{
+    background-color: red;
+    font-size:25px ;
+    width: 100%;
+    height: 3rem;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid yellow;
+}
 .side {
-    width: 90%;
-    height: 5rem;
-    background-color: darkblue;
+    width: 100%;
+    height: 4rem;
+    background-color: red;
     color: white;
     font-size: 25px;
     display: flex;
@@ -78,33 +87,34 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
-    border-radius: 1rem;
+    border-top: 1px solid yellow;
+    border-bottom: 1px solid yellow;
 }
 .imag{
-    width: 90%;
-    margin: 10px;
-    border-radius: 1rem;
+    height: 100px;
     border: 2px solid black;
 }
 .card{
-    height: 300px;
-    width: 200px;
-    background-color: blueviolet;
+    height: 200px;
+    width: 120px;
+    background-color: white;
     margin: 10px;
-    border: 2px solid black;
-    border-radius: 1rem;
 }
 .text {
-    color: white;
-    font-size: 20px;
-    margin: 10px;
+    font-size: 15px;
+    /* margin: 10px; */
 }
-
+.student{
+    display: flex;
+}
+.fact{
+    display: flex;
+}
       </style>
     </head>
     <body>
       <nav class="navbar">
-        <img src="download.jpg" alt="ERROR-404" class="photo" />
+        <img src="Windows1.png" alt="ERROR-404" class="photo" />
         <div class="navbar-option">
           <a href="#" class="nav">Home</a>
           <a href="#" class="nav">About</a>
@@ -114,6 +124,7 @@
       </nav>
       <div class="ak">
         <div class="sidebar">
+          <div class="name">SideBar</div>
           <div class="side">Home</div>
           <div class="side">Placement</div>
           <div class="side">Recruitment</div>
@@ -121,40 +132,49 @@
           <div class="side">News</div>
         </div>
         <div class="main">
+          <div class="Fact">
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="Mount.png" alt="not found"class="imag">
             <p class="text">Arjun Bala(JAVA)</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="Wire.png" alt="not found"class="imag">
             <p class="text">Vishal Kansagara (c)</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
+        </div>
+        <div class="student">
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="Wire.png" alt="not found"class="imag">
             <p class="text">Dharmik Sir (WD)</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="Circuite.png" alt="not found"class="imag">
             <p class="text">Mehul Sir(C)</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="Remote.png" alt="not found"class="imag">
             <p class="text">Shruti Maniar</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
           <div class="card">
-            <img src="cmp.png" alt="not found"class="imag">
+            <img src="mobile.png" alt="not found"class="imag">
+            <p class="text">Arjun Bala</p>
+            <p class="text">BE. M. Tech.(CSE)</p>
+          </div>
+          <div class="card">
+            <img src="Wire1.png" alt="not found"class="imag">
             <p class="text">Arjun Bala</p>
             <p class="text">BE. M. Tech.(CSE)</p>
           </div>
         </div>
+        </div>
       </div>
 
-      <div class="footer">@Darshan university-Rajkot</div>
+      <div class="footer">&copy;Darshan university-Rajkot</div>
     </body>
   </html>
 </html>
