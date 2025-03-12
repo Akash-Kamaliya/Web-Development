@@ -34,9 +34,12 @@
   border-right: 2px solid black;
   border-left: 2px solid black;
   display: flex;
+  transition: all 0.3s linear;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  left: -320px;
 }
 .footer {
   background-color: blue;
@@ -46,17 +49,21 @@
   border: 2px solid black;
   font-size: 30px;
   display: flex;
+  position: fixed;
+  bottom: 0;
   align-items: center;
   justify-content: space-around;
 }
 .main {
   background-color: white;
-  width: 80%;
   height: 34.5rem;
   overflow: scroll;
+width: 100%;
 }
 .ak {
+  width: 100%;
   display: flex;
+
 }
 .name {
   background-color: red;
@@ -99,7 +106,36 @@
 }
 .student {
   display: flex;
+  flex-wrap: wrap;
 }
 .fact {
   display: flex;
+  flex-wrap: wrap;
+}
+.btn_one{
+  font-size: 30px;
+}
+.btn_two{
+  color: gray;
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 275px;
+  opacity: 0;
+  cursor: pointer;
+}
+#check{
+  display: none;
+}
+#check:checked ~ .sidebar {
+  left: 0;
+  transition-duration: 0.30s;
+}
+#check:checked ~ .btn_one  {
+  opacity: 0;
+  transition-duration: 0.30s;
+}
+#check:checked ~ .btn_two i {
+  opacity: 1;
+  transition-duration: 0.30s;
 }

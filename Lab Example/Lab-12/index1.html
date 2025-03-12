@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            font-size: 30px;
+        }
+        .div1 a::selection {
+            background-color: red;
+            color: black;
+        }
+        
+        .div2 a::selection {
+            background-color: yellow;
+            color:black;
+        }
+        td p {
+            font-size: 20px;
+        }
+        input {
+            padding: 5px;
+            border-radius: 15px;
+            background-color: antiquewhite;
+            box-shadow: 2px 2px 5px black;
+        }
+        input:focus{
+            border-radius: 15px;
+            background-color: antiquewhite;
+            box-shadow: 10px 10px 15px black;
+        }
+        .table tr:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <a href="www.youtube.com">Youtube</a>
+    </div>
+    <div class="div2">
+        <a href="www.instagraam.com">Instagram</a>
+    </div>
+    <table>
+        <tr><td><p>Name</p></td></tr>
+        <tr><td><input type="text"></td></tr>
+        <tr><td><p>Mobile Number</p></td></tr>
+        <tr><td><input type="number"></td></tr>
+        <tr><td><p>Email</p></td></tr>
+        <tr><td><input type="email"></td></tr>
+    </table>
+    <table border="black" align="center" class="table">
+        <tr>
+            <td>Hello</td>
+            <td>Hi</td>
+        </tr>
+        <tr>
+            <td>How are you</td>
+            <td>I am Fine</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hi</td>
+        </tr>
+        <tr>
+            <td>How are you</td>
+            <td>I am Fine</td>
+        </tr>
+        <tr>
+            <td>Hello</td>
+            <td>Hi</td>
+        </tr>
+        <tr>
+            <td>How are you</td>
+            <td>I am Fine</td>
+        </tr>
+    </table>
+</body>
+</html>
