@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+.header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo i {
+    font-size: 40px;
+}
+.header .nav select {
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.button {
+    border: none;
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 7px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.header .nav a i {
+    font-size: 20px;
+    color: white;
+    margin-right: 10px;
+}
+.main {
+    background-color: gray;
+}
+.main1 {
+    display: flex;
+    justify-content: center;
+    height: 150px;  
+    align-items: center;
+}
+.main1 img{
+    height: 130px;
+    width: 90%;
+    border-radius: 20px;
+}
+.main2 {
+    display: flex;
+    justify-content: space-around;
+    height: 485px;
+}
+.main2 .img1 {
+    background-color: white;
+    height: 400px;
+    width: 228px;
+    margin-top: 20px;
+}
+.main2 .img1 {
+    overflow: hidden;
+    border-radius: 20px;
+}
+.main2 .img1 p {
+    margin: 5px;
+}
+.main2 .img1 .p1 {
+    font-weight: 600;
+    font-size: 25px;
+}
+.main2 .img1 .button {
+    margin-left: 30px;
+}
