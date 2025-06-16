@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CreateAcount.css">
+</head>
+<body>
+    <form action="#" id="form">
+        <h2 class="h3">Create Account</h2>
+        <table>
+        <tr class="div1">
+            <td>
+            <label for="name1" class="name1">First Name*</label>
+            </td>   
+            <td>
+            <label for="name2" class="name2">Last Name*</label>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="text" name="name1" id="name1"></td>
+            <td><input type="text" name="name2" id="name2"></td>
+        </tr>
+        <tr class="div2">
+            <td><label for="email" class="email">Email*</label></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr class="div1">
+            <td><label for="name1" class="name1">Password*</label></td>
+            <td><label for="name2" class="name2">Confirm Password*</label></td>
+        </tr>
+        <tr> 
+            <td><input type="password" name="name1" id="name1"></td>
+            <td><input type="password" name="name2" id="name2"></td>
+        </tr>
+        <tr class="div3">
+            <td><label for="gender" class="email">Gender*</label></td>
+            <td><label for="hobi" class="hobi"> Hobbies*</label></td>
+        </tr>
+        <tr>
+            <td><input type="radio" id="Male" name="gender" value="Male" />
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female" />
+            <label for="Female">Female</label></td>
+            <td>
+            <span class="span1">
+                <input type="checkbox" name="hobi" id="music">
+                <label for="music">Music</label>
+                <input type="checkbox" name="hobi" id="dance">
+                <label for="music">Dance</label>
+            </span>
+        </td>
+        </tr>
+        <tr class="div1">
+            <td>
+            <label for="sorce" class="email">Sorce of Income*</label>
+        </td>
+        <td>
+            <label for="income" class="income">Income*</label>
+        </td>
+    </tr>
+    <tr>
+            <td><select name="sorce" id="sorce">
+                <option value="none">......</option>
+                <option value="job">Job</option>
+                <option value="bes">Bisness</option>
+            </select></td>
+            <td><input type="range" name="range" id="income" max="20k"></td>
+        </tr>
+        <tr class="div1">
+            <td><label for="name1" class="photo">Upload a Picture*</label></td>
+            <td><label for="name2" class="age">Age*</label> </td>     
+        </tr>
+        <tr>
+            <td><input type="file" name="name1" id="file"></td>
+            <td><input type="number" name="name2" id="num"></td>
+        </tr>
+        <tr>
+            <td><label for="bio" class="bio">Bio</label></td>
+        </tr>
+        <tr>
+            <td><input type="text" name="bio" id="bio"></td>
+        </tr>
+        <tr class="sub">
+            <td colspan="2" align="content"><button type="submit" class="sub1">Create</button></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,77 @@
+#form {
+  /* width: 400px;
+  height: 550px; */
+  background-color: aquamarine;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.h3 {
+  text-align: center;
+  background-color: lightcoral;
+}
+.name1 {
+  color: blue;
+}
+.name2 {
+  color: blue;
+  text-align: end;
+
+}
+#name1 {
+  width: 200px;
+  border-radius: 15px;
+}
+#name2 {
+  width: 200px;
+  border-radius: 15px;
+}
+#email {
+  width: 100%;
+  border-radius: 15px;
+}
+.email {
+  color: blue;
+}
+.hobi {
+  color: blue;
+}
+#sorce {
+  border-radius: 15px;
+  width: 200px;
+}
+.income {
+  color: blue;
+}
+#income {
+  width: 200px;
+}
+#file {
+  width: 200px;
+  border: 1px solid black;
+}
+#num {
+  width: 200px;
+  border-radius: 15px;
+}
+.photo {
+  color: blue;
+}
+.age {
+  color: blue;
+}
+.bio {
+  color: blue;
+}
+#bio {
+  width: 250px;
+  height: 50px;
+}
+.sub {
+  background-color: palevioletred;
+  height: 50px;
+}
+.sub1 {
+  background-color: aqua;
+  border-radius: 15px;
+  width: 70px;
+  height: 30px;
+}

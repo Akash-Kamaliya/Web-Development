@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:visited{
+            color: red;
+        }
+        p::first-line{
+            background-color: aqua;
+        }
+        .first-letter{
+            font-size: 30px;
+            background-color: aqua;
+        }
+        *::selection{
+            background-color: red;
+            color: black;
+        }
+        td:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="https://www.youtube.com/results">
+        <span><h1 class="youtube">You Tube</h1></span>
+        <input type="text" placeholder="Search SomeThing" name="search_query" id="Youtube">
+        <button class="you"><a>Search</a></button>
+      </form>
+
+    <p>
+        <span class="first-letter">L</span>orem ipsum dolor sit amet consectetur adipisicing elit. Pariatur voluptas sed, aliquid 
+        iure dignissimos nobis, inventore natus enim dicta repellendus eos ipsam minima velit 
+        ex ratione error corrupti tenetur doloremque?
+    </p>
+    <table border="black">
+        <tr>
+            <td>Hello</td>
+            <td>Hi</td>
+        </tr>
+        <tr>
+            <td>How are you</td>
+            <td>I am Fine</td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,176 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    background-color: rgb(255, 137, 176);
+}
+.img img{
+    height: 3rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+.img {
+    display: flex;
+    align-items: center;
+}
+.img  p{
+    font-size: 20px;
+    color: purple;
+    margin-left: 1rem;
+}
+.nav {
+    text-decoration: none;
+    color: purple;
+    font-size: 20px;
+    margin-right: 2rem;
+}
+.navbar-option {
+    display: flex;
+    align-items: center;
+}
+.navbar-option button {
+    height: 2rem;
+    border-radius: 20px;
+    border: none;
+    margin-right:2rem ;
+    width: 7rem;
+    font-size: 14px;
+    color: white;
+    background-color: blueviolet;
+    box-shadow: 2px 2px 10px black;
+}
+
+.about-text {
+    font-size: 30px;
+
+}
+.about-text1 {
+    font-size: 30px;
+    margin-left: 3.5rem;
+}
+.pfp {
+    display: flex;
+
+}
+.pfp2 img {
+    height: 30rem;
+    border-radius: 150px;
+    box-shadow: 2px 2px 15px black;
+    margin-bottom: 30px;
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(253, 217, 223);
+}
+
+
+.about {
+    margin-bottom: 2rem;
+    margin-top: 2rem ;
+}
+b {
+    color: purple;
+}
+.button-pfp1{
+    margin-top:1rem ;
+    height: 4rem;
+    font-size: 15px;
+    width: 10rem;
+    border-radius: 30px;
+    padding: 7px;
+    background-color: rgb(249, 161, 176);
+    color: purple;
+    border: none;
+    box-shadow: 2px 2px 15px black;
+}
+.button-pfp2{
+    margin-top: 24rem;
+    height: 4rem;
+    width: 10rem;
+    border-radius: 30px;
+    padding: 7px;
+    background-color: rgb(249, 161, 176);
+    color: purple;
+    font-size: 15px;
+    border: none;
+    box-shadow: 2px 2px 15px black;
+}
+.logos {
+    height: 6rem;
+    background-color: purple;
+    display: flex;
+    justify-content: space-around;
+}
+.logos img {
+    height:4rem;
+    margin: 1rem;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px white;
+}
+.main2{
+    width: 100%;
+    background-color: blueviolet;
+    height: 80vh;
+}
+.about1{
+    height: 60%;
+    display: flex;
+}
+.about1-text1 {
+    width: 30%;
+    margin-top: 80px;
+}
+
+.about1-text1 p {
+    padding-left: 100px;
+    color: white;
+    font-size: 100px;
+    text-shadow: 2px 2px 15px black;
+}
+.about1-text2 {
+    width: 65%;
+    margin-top: 90px;
+}
+.about1-text2 p {
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 10px black;
+}
+
+.about2 {
+    margin-top: 50px    ;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+.about2-div1 {
+    display: flex;
+}
+.about2-div1-div1 {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px black;
+}
+.about2-div1-div1 p {
+   color: white;
+   padding: 30%;
+   font-size: 30px;
+   text-shadow: 2px 2px 5px black;
+}
+.about2-div1-div2 {
+    margin-left: 30px;
+    padding-top: 7%;
+}
+.about2-div1-div2 p{
+    color: white;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+}

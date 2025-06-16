@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number to Word</title>
+</head>
+<body>
+    <script>
+    number = prompt("Enter a number between 0 and 9999: ");
+
+    if (number < 0 || number > 9999)
+    {
+    document.write("Number out of range.");
+    }
+  else
+  {
+    convert_to_words(number);
+  }
+
+function print_digit(n)
+{
+  switch (n)
+  {
+  case 0:
+    document.write("Zero ");
+    break;
+  case 1:
+    document.write("One ");
+    break;
+  case 2:
+    document.write("Two ");
+    break;
+  case 3:
+    document.write("Three ");
+    break;
+  case 4:
+    document.write("Four ");
+    break;
+  case 5:
+    document.write("Five ");
+    break;
+  case 6:
+    document.write("Six ");
+    break;
+  case 7:
+    document.write("Seven ");
+    break;
+  case 8:
+    document.write("Eight ");
+    break;
+  case 9:
+    document.write("Nine ");
+    break;
+  }
+}
+
+function print_tens(n)
+{
+  switch (n)
+  {
+  case 2:
+    document.write("Twenty ");
+    break;
+  case 3:
+    document.write("Thirty ");
+    break;
+  case 4:
+    document.write("Forty ");
+    break;
+  case 5:
+    document.write("Fifty ");
+    break;
+  case 6:
+    document.write("Sixty ");
+    break;
+  case 7:
+    document.write("Seventy ");
+    break;
+  case 8:
+    document.write("Eighty ");
+    break;
+  case 9:
+    document.write("Ninety ");
+    break;
+  }
+}
+
+function print_teens(n)
+{
+  switch (n)
+  {
+  case 10:
+    document.write("Ten ");
+    break;
+  case 11:
+    document.write("Eleven ");
+    break;
+  case 12:
+    document.write("Twelve ");
+    break;
+  case 13:
+    document.write("Thirteen ");
+    break;
+  case 14:
+    document.write("Fourteen ");
+    break;
+  case 15:
+    document.write("Fifteen ");
+    break;
+  case 16:
+    document.write("Sixteen ");
+    break;
+  case 17:
+    document.write("Seventeen ");
+    break;
+  case 18:
+    document.write("Eighteen ");
+    break;
+  case 19:
+    document.write("Nineteen ");
+    break;
+  }
+}
+
+function convert_to_words(num)
+{
+  if (num == 0)
+  {
+    document.write("Zero");
+    return;
+  }
+
+  if (num >= 1000)
+  {
+    print_digit(Math.floor(num / 1000));
+    document.write("Thousand ");
+    num %= 1000;
+  }
+
+  if (num >= 100)
+  {
+    print_digit(Math.floor(num / 100));
+    document.write("Hundred ");
+    num %= 100;
+  }
+
+  if (num >= 20)
+  {
+    print_tens(Math.floor(num / 10));
+    num %= 10;
+  }
+  else if (num >= 10)
+  {
+    print_teens(num);
+    return;
+  }
+
+  if (num > 0)
+  {
+    print_digit(num);
+  }
+}
+    </script>
+</body>
+</html>

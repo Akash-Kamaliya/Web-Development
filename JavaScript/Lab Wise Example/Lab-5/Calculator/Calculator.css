@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.cal{
+    height: 35rem;
+    width: 23rem;
+    background-color: aquamarine;
+    margin: 5rem auto;
+    padding: .50rem;
+}
+.display{
+    height: 7rem;
+    width: 20rem;
+    background-color: black;
+    margin: 2.5rem auto;
+}
+/* .flex{
+    display: flex;
+} */
+.buttuns{
+    margin: auto;
+    padding: auto;
+    height: 20rem;
+    width: 19rem;
+}
+.but{
+    height: 4rem;
+    width: 4rem;
+    background-color: azure;
+    margin: .15rem;
+}

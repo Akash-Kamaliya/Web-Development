@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong</title>
+</head>
+<body>
+    <script>
+        num = prompt("Enter Number");
+        sum = 0;
+        d = 0;
+        i = num;
+        while (i!=0)
+        {
+            i = Math.floor(i/10);
+            d++;
+        }
+        console.log(d);
+        i = num;
+        reminder = 0;
+        while(i!=0){
+            reminder = i %10;
+            sum =Math.floor(Math.pow(reminder,d)) + sum;
+            i = Math.floor(i/10);
+        }
+        console.log(sum);
+        console.log(num);
+
+        if(num == sum){
+            document.write("Given Number is Armstrong");
+        }
+        else{
+            document.write("Given Number is Not Armstrong");
+        }
+    
+    </script>
+</body>
+</html>

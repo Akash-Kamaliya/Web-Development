@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latter</title>
+</head>
+<body>
+    <script>
+        name = prompt("Enter a Name");
+        for(i=0;i<name.length;i++){
+            if(name.charAt(i)=='a'){
+                first = i;
+            }
+        }
+        for(i=name.length-1;i>=0;i--){
+            if(name.charAt(i)=='a'){
+                last = i;
+            }
+        }
+        document.write("First Ocarane = "+first+"Last Ocurance = "+last+"Between = "+name.substring(first+1,last));
+    </script>
+</body>
+</html>

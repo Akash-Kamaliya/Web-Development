@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCD</title>
+</head>
+<body>
+    <script>
+        n1 = prompt("Enter first number :");
+        n2 = prompt("Enter second number :");
+        a = n1, b = n2;
+        while (b != 0)
+            {
+                temp = b;
+                b = a % b;
+                a = temp;
+            }
+        hcf = a;
+        lcm = (n1 * n2) / hcf;
+        document.write("LCM of given numbers is :"+lcm);
+        document.write("</br>");
+        document.write("GCD of given numbers is :"+hcf);
+    </script>
+</body>
+</html>

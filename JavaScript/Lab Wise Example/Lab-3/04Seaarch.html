@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seaarching</title>
+</head>
+<body>
+    <script>
+        sentence = "Hello World my name is Akash Kamaliya";
+        word = sentence.split(" ");
+        c=0;
+        word1 = prompt("Enter a Word to sentenc");
+        for(i=0;i<word.length;i++){
+            if(word[i].toLowerCase()===word1){
+                cur = i;
+                c++;
+                break;
+            }
+        }
+        if(c!=0){
+            document.write("Your Word found at :"+i+"Index");
+        }
+        else{
+            document.write("Your Word Not found");
+        }
+    </script>
+</body>
+</html>
