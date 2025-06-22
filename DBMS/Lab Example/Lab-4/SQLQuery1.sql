@@ -148,6 +148,9 @@ SET ACTNO = 111 , AMOUNT = 5000
 WHERE CNAME = 'SANDIP';
 -- 4.
 -- Update amount of KRANTI to 7000. (Use Deposit Table)
+UPDATE DEPOSITE_DEMO123
+SET ACTNO = 111 , AMOUNT = 5000
+WHERE CNAME = 'SANDIP';
 -- 5.
 -- Update branch name from ANDHERI to ANDHERI WEST. (Use Branch Table)
 -- 6.
