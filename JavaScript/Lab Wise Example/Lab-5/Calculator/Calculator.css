@@ -2,18 +2,35 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    background-color: rgb(211, 211, 211);
+}
 .cal{
     height: 35rem;
     width: 23rem;
-    background-color: aquamarine;
-    margin: 5rem auto;
+    background-color: rgb(0, 0, 0);
+    margin: 3rem auto;
     padding: .50rem;
+    border-radius: 1rem;
+}
+.dis{
+    height:4rem ;
+    width: 17rem;
+    padding: 1rem;
+    margin: .4rem;
+    text-align: right;
+    background-color: rgb(74, 74, 74);
+    color: aliceblue;
+    font-size: 30px;
+    border-radius: 1rem;
+    border: none;
 }
 .display{
     height: 7rem;
     width: 20rem;
     background-color: black;
     margin: 2.5rem auto;
+    border-radius: 1rem;
 }
 /* .flex{
     display: flex;
@@ -27,6 +44,19 @@
 .but{
     height: 4rem;
     width: 4rem;
-    background-color: azure;
+    background-color: rgb(181, 181, 181);
     margin: .15rem;
+    border-radius: 1rem;
+    font-size: 20px;
+    border: 2px white solid;
+}
+.but1{
+    background-color: rgb(78, 78, 78);
+    color: antiquewhite;
+}
+.but2{
+    background-color: rgb(121, 121, 211);
+}
+.but:active{
+    background-color:  rgb(130, 130, 130);
 }

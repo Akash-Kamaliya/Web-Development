@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) username must be of minimum 8 characters-->
+    <h3>username must be of minimum 8 characters</h3>
+    <input type="text" id ="txtInput" class="UserName01">
+    <button onclick="validateMe()">Click TO check</button>
+    <h3 id="txtOutput">Output</h3>
+    <!-- 2) password must contain at least 1 digit and 1 special character and should be between 8-
+12 characters -->
+    <h3>2 password must contain at least 1 digit and 1 special character and should be between 8-
+12 characters</h3>
+    <input type="password" id ="txtInput" class="UserName02">
+    <button onclick="validateMe()">Click TO check</button>
+    <h3 id="txtOutput">Output</h3>
+    <script>
+        function validateMe(){
+            a = document.getElementById("txtInput");
+            b = document.getElementById("txtOutput");
+            if(a.class="UserName01"){
+                pattern = "^[a-zA-Z0-9]{8,}$";
+                regexp = new RegExp(pattern);
+                if(regexp.test(a.value)){
+                    b.innerHTML = "Valid";
+                }
+                else{
+                    b.innerHTML = "In Valid";
+                }
+            }
+            else if(a.class="UserName02"){
+                pattern = "^[a-zA-Z0-9]{8,}$";
+                regexp = new RegExp(pattern);
+                if(regexp.test(a.value)){
+                    b.innerHTML = "Valid";
+                }
+                else{
+                    b.innerHTML = "In Valid";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

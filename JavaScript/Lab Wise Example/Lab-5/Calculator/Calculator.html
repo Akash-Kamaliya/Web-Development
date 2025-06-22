@@ -8,39 +8,54 @@
 </head>
 <body>
     <div class="cal">
-        <div class="display"></div>
+        <div class="display">
+            <input type="text" class="dis" id ="txtInput" >
+        </div>
         <div class="buttuns">
             <div class="flex">
-                <button class="but">%</button>
-                <button class="but">CE</button>
-                <button class="but">C</button>
-                <button class="but">#</button>
+                <button onclick="appendDisplay('%')" class="but but1">%</button>
+                <button onclick="appendDisplay(' ')" class="but but1">CE</button>
+                <button onclick="appendDisplay('<-')" class="but but1">&leftarrow;</button>
+                <button onclick="appendDisplay('#')" class="but but1">#</button>
             </div>
             <div class="flex">
-                <button class="but">7</button>
-                <button class="but">8</button>
-                <button class="but">9</button>
-                <button class="but">x</button>
+                <button onclick="appendDisplay('7')" class="but">7</button>
+                <button onclick="appendDisplay('8')" class="but">8</button>
+                <button onclick="appendDisplay('9')" class="but">9</button>
+                <button onclick="appendDisplay('x')" class="but but1">x</button>
             </div>
             <div class="flex">
-                <button class="but">4</button>
-                <button class="but">5</button>
-                <button class="but">6</button>
-                <button class="but">-</button>
+                <button onclick="appendDisplay('4')" class="but">4</button>
+                <button onclick="appendDisplay('5')" class="but">5</button>
+                <button onclick="appendDisplay('6')" class="but">6</button>
+                <button onclick="appendDisplay('-')" class="but but1">-</button>
             </div>
             <div class="flex">
-                <button class="but">3</button>
-                <button class="but">2</button>
-                <button class="but">1</button>
-                <button class="but">+</button>
+                <button onclick="appendDisplay('3')" class="but">3</button>
+                <button onclick="appendDisplay('2')" class="but">2</button>
+                <button onclick="appendDisplay('1')" class="but">1</button>
+                <button onclick="appendDisplay('+')" class="but but1">+</button>
             </div>
             <div class="flex">
-                <button class="but">+/-</button>
-                <button class="but">0</button>
-                <button class="but">.</button>
-                <button class="but">=</button>
+                <button onclick="appendDisplay('+/-')" class="but">+/-</button>
+                <button onclick="appendDisplay('0')" class="but">0</button>
+                <button onclick="appendDisplay('.')" class="but">.</button>
+                <button onclick="dissplayAnswer('=')" class="but but2">=</button>
             </div>
         </div>
     </div>
+    <script>
+        ans = 0;
+        a = document.getElementById("txtInput");
+        function appendDisplay(value){
+            a.value += value;
+        }
+        function dissplayAnswer(){
+            result = a.value.split("+");
+            console.log(result[0]);
+            console.log(result[1]);
+            console.log(result[2]);
+        }
+    </script>
 </body>
 </html>
