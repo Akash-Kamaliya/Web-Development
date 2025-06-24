@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="text">Login Page</h3>
+    <input type="text" id="a">
+    <input type="password" id="b">
+    <button onclick="btn()">Click</button>
+    <script>
+        function btn(){
+            a = document.getElementById("a");
+            b = document.getElementById("b");
+            if(a.value!="admon"){
+                document.getElementById("text").innerHTML = "Invalid";
+            }
+            else{
+                document.getElementById("text").innerHTML = "Valid";
+            }
+        }
+    </script>
+</body>
+</html>

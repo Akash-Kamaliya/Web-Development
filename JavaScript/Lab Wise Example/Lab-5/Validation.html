@@ -1,48 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    </head>
+    <body>
     <!-- 1) username must be of minimum 8 characters-->
     <h3>username must be of minimum 8 characters</h3>
-    <input type="text" id ="txtInput" class="UserName01">
-    <button onclick="validateMe()">Click TO check</button>
-    <h3 id="txtOutput">Output</h3>
+    <input type="text" id="txtInput01" />
+    <button onclick="validateMe01()">Click TO check</button>
+    <h3 id="txtOutput01">Output</h3>
+
     <!-- 2) password must contain at least 1 digit and 1 special character and should be between 8-
 12 characters -->
-    <h3>2 password must contain at least 1 digit and 1 special character and should be between 8-
-12 characters</h3>
-    <input type="password" id ="txtInput" class="UserName02">
-    <button onclick="validateMe()">Click TO check</button>
-    <h3 id="txtOutput">Output</h3>
+    <h3>
+    2 password must contain at least 1 digit and 1 special character and
+    should be between 8- 12 characters
+    </h3>
+    <input type="password" id="txtInput02" />
+    <button onclick="validateMe02()">Click TO check</button>
+    <h3 id="txtOutput02">Output</h3>
+
+    <!-- 3) password and repeat password must be same -->
+    <h3>password and repeat password must be same</h3>
+    <input type="password" id="txtInput03" />
+    <input type="password" id="txtInput031" />
+    <button onclick="validateMe03()">Click TO check</button>
+    <h3 id="txtOutput03">Output</h3>
+
+    <!-- 4) age must be greater than 18 (calculate from date of birth) -->
+    <h3>age must be greater than 18 (calculate from date of birth)</h3>
+    <input type="number" id="txtInput04" />
+    <button onclick="validateMe04()">Click TO check</button>
+    <h3 id="txtOutput04">Output</h3>
+
+    <!-- 5) enrollment must be of 11 digits -->
+    <h3>enrollment must be of 11 digits</h3>
+    <input type="text" id="txtInput05" />
+    <button onclick="validateMe05()">Click TO check</button>
+    <h3 id="txtOutput05">Output</h3>
+
+    <!-- 6) email validation -->
+    <h3>email validation</h3>
+    <input type="text" id="txtInput06" />
+    <button onclick="validateMe06()">Click TO check</button>
+    <h3 id="txtOutput06">Output</h3>
+
     <script>
-        function validateMe(){
-            a = document.getElementById("txtInput");
-            b = document.getElementById("txtOutput");
-            if(a.class="UserName01"){
-                pattern = "^[a-zA-Z0-9]{8,}$";
-                regexp = new RegExp(pattern);
-                if(regexp.test(a.value)){
-                    b.innerHTML = "Valid";
-                }
-                else{
-                    b.innerHTML = "In Valid";
-                }
-            }
-            else if(a.class="UserName02"){
-                pattern = "^[a-zA-Z0-9]{8,}$";
-                regexp = new RegExp(pattern);
-                if(regexp.test(a.value)){
-                    b.innerHTML = "Valid";
-                }
-                else{
-                    b.innerHTML = "In Valid";
-                }
-            }
+    function validateMe01() {
+        a = document.getElementById("txtInput01");
+        b = document.getElementById("txtOutput01");
+        pattern = "^[a-zA-Z]{8,}$";
+        regexp = new RegExp(pattern);
+        if (regexp.test(a.value)) {
+        b.innerHTML = "Valid";
+        } else {
+        b.innerHTML = "In Valid";
         }
+    }
+    function validateMe02() {
+        a = document.getElementById("txtInput02");
+        b = document.getElementById("txtOutput02");
+        pattern = "^[a-zA-Z0-9,@,!,$,#,%]{2,}$";
+        regexp = new RegExp(pattern);
+        if (regexp.test(a.value)) {
+        b.innerHTML = "Valid";
+        } else {
+        b.innerHTML = "In Valid";
+        }
+    }
+    function validateMe03() {
+        a = document.getElementById("txtInput03");
+        b = document.getElementById("txtInput031");
+        c = document.getElementById("txtOutput03");
+        if (a.value == b.value) {
+        c.innerHTML = "Valid";
+        } else {
+        c.innerHTML = "In Valid";
+        }
+    }
+    function validateMe04() {
+        a = document.getElementById("txtInput04");
+        b = document.getElementById("txtOutput04");
+        if (a.value >= 18) {
+        b.innerHTML = "Valid";
+        } else {
+        b.innerHTML = "In Valid";
+        }
+    }
+    function validateMe05() {
+        a = document.getElementById("txtInput05");
+        b = document.getElementById("txtOutput05");
+        pattern = "^[0-9]{11}$";
+        regexp = new RegExp(pattern);
+        if (regexp.test(a.value)) {
+        b.innerHTML = "Valid";
+        } else {
+        b.innerHTML = "In Valid";
+        }
+    }
+    function validateMe06() {
+        a = document.getElementById("txtInput06");
+        b = document.getElementById("txtOutput06");
+        pattern = "^[a-zA-Z0-9]{1,}@[a-zA-Z0-9]{1,}.com$";
+        regexp = new RegExp(pattern);
+        if (regexp.test(a.value)) {
+        b.innerHTML = "Valid";
+        } else {
+        b.innerHTML = "In Valid";
+        }
+    }
     </script>
 </body>
 </html>
