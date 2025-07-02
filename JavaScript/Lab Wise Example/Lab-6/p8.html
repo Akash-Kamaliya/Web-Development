@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading {
+            text-align: center;
+            font-family: sans-serif;
+            color: black;
+        }
+    </style>
+</head>
+
+<body id="color">
+    <h1 id="heading">This is Heading</h1>
+    <button id="redButton">red</button>
+    <button id="greenButton">green</button>
+    <button id="findTime">find time</button>
+    <p id="timeDisplay"></p>
+    <script>
+        const heading = document.getElementById("heading");
+        
+        function showTime(){
+            const now = new Date();
+            document.getElementById('timeDisplay').textContent = now.toLocaleTimeString();
+        }
+        findTime.addEventListener("click", () => {
+            showTime();
+        })
+        
+        redButton.addEventListener("click", () => {
+            color.style.backgroundColor = "red"
+        });
+
+        greenButton = document.getElementById("greenButton")
+        greenButton.addEventListener("click", () => {
+            color.style.backgroundColor = "green"
+        })
+
+        heading.addEventListener("mouseover", () => {
+            heading.style.color = "yellow";
+        });
+
+        heading.addEventListener("mouseleave", () => {
+            heading.style.color = "black";
+        });
+    </script>
+</body>
+
+</html>

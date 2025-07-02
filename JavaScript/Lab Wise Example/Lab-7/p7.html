@@ -1,0 +1,26 @@
+<!-- Demonstrate the Arrow functions. (B) -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Functions Demo</title>
+</head>
+<body>
+    <h2>Arrow Functions Example</h2>
+    <button onclick="showSum()">Show Sum</button>
+    <p id="result"></p>
+    <script>
+        const add = (a, b) => a + b;
+
+        function showSum() {
+            const sum = add(5, 7);
+            document.getElementById('result').textContent = `Sum of 5 and 7 is: ${sum}`;
+        }
+
+        const sayHello = name => `Hello, ${name}!`;
+        console.log(sayHello('Akash'));
+
+        const square = x => x * x;
+        console.log(`Square of 4 is: ${square(4)}`);
+    </script>
+</body>
+</html>

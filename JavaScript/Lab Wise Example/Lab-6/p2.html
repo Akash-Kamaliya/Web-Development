@@ -1,0 +1,38 @@
+<!-- WAP to recognize which mouse event is ƒired -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Event Detector</title>
+  <style>
+    #eventBox {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #4CAF50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 100px auto;
+      font-size: 18px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="eventBox">hello</div>
+
+  <script>
+    const box = document.getElementById("eventBox");
+
+    const events = ["click", "dblclick", "mousedown", "mouseup", "mouseover", "mouseout"];
+
+    events.forEach(eventType => {
+      box.addEventListener(eventType, function() {
+        box.textContent = `Mouse event fired: ${eventType}`;
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- 2. Demonstrate the difference between let and var. (A) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function Var() {
+    if (true) {
+        var x = 10;
+    }
+    document.write("var x = " + x + "<br>");
+}
+
+function Let() {
+    if (true) {
+        let y = 20;
+        document.write("let y inside block = " + y + "<br>");
+    }
+    document.write("let y outside block is not accessible<br>");
+}
+Var();
+Let();
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button1 {
+            padding: 12px 24px;
+            background-color: rgb(76, 175, 80);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        div {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #body {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div>
+        <button class="button1" onclick="change()" id="btn">Click to change background color</button>
+    </div>
+    <script>
+        let button = document.getElementById("btn");
+        function randomColorGenerater() {
+            let r = Math.round(Math.random() * 255)
+            let g = Math.round(Math.random() * 255)
+            let b = Math.round(Math.random() * 255)
+            return `rgb(${r}, ${g}, ${b})`
+        }
+        function start() {
+            ref = document.getElementById("body");
+            ref.style.backgroundColor = randomColorGenerater();
+        }
+        function change() {
+            setInterval(start, 500);
+        }
+    </script>
+</body>
+
+</html>
