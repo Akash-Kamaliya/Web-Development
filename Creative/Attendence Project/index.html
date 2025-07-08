@@ -11,8 +11,9 @@
 
 <body>
     <div class="top-bar">
+        <h1 style="color: black;">Attendance Tracker</h1>
         <div class="class-switcher">
-            <button onclick="switchClass('3A')">3A</button>
+            <button onclick="switchClass('3A')" class="temp">3A</button>
             <button onclick="switchClass('3B')">3B</button>
         </div>
         <input type="text" id="searchInput" placeholder="Search roll number..." oninput="searchRoll()">
@@ -25,12 +26,12 @@
             </div>
             </p>
         </div>
-        <button id="toggle-btn" id="darkModeBtn" onclick="toggleDarkMode()">Dark Mode</button>
+        <button class="temp1" id="toggle-btn" id="darkModeBtn" onclick="toggleDarkMode()">Dark Mode</button>
     </div>
+    <div class="main">
     <div id="currentRoll"></div>
     <div class="student-list" id="studentList"></div>
     <div class="absent-bar">
-        <i class="fas fa-user-slash"></i>
         <input type="text" id="copyText" readonly placeholder="Absent roll numbers...">
         <input type="text" id="filenamePrefix" placeholder="File prefix (e.g., Absent)" value="Absent">
         <button id="copyBtn" onclick="copyToClipboard()"><i class="fas fa-copy"></i> Copy</button>
@@ -465,6 +466,7 @@
         }
         switchClass('3A');
     </script>
+    </div>
 </body>
 
 </html>
