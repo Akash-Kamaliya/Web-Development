@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="top-bar">
+    <div class="side-bar">
         <h1 style="color: black;">Attendance Tracker</h1>
         <div class="class-switcher">
             <button onclick="switchClass('3A')" class="temp">3A</button>
@@ -417,11 +417,18 @@
                 rollPointer = Math.min(rollPointer + 1, students.length - 1);
                 renderList();
             } else if (e.key === 'Tab') {
-                e.preventDefault();
-                students[rollPointer].status = 'present';
-                rollPointer = Math.min(rollPointer + 1, students.length - 1);
-                renderList();
-            }
+    e.preventDefault();
+    const roll = students[rollPointer].roll;
+    students[rollPointer].status = 'present';
+    const index = absentRolls.indexOf(roll);
+    if (index !== -1) {
+        absentRolls.splice(index, 1); // Remove from absent list
+        document.getElementById('copyText').value = absentRolls.join(', ');
+    }
+    rollPointer = Math.min(rollPointer + 1, students.length - 1);
+    renderList();
+}
+
         });
         function copyToClipboard() {
             navigator.clipboard.writeText(document.getElementById('copyText').value)

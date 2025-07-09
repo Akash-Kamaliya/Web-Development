@@ -1,7 +1,7 @@
 body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
-  background-color: #fff;
+  background-color: #e0ffc7;
   color: #000;
   transition: background-color 0.3s, color 0.3s;
   display: flex;
@@ -12,11 +12,11 @@ body {
   color: #fff;
 }
 
-.top-bar {
+.side-bar {
   padding: 10px;
   width: 20%;
   height: 97vh;
-  background: #e0e0e0;
+  background: #b9ffba;
 }
 .class-switcher .temp {
   margin-left: 0.5rem;
@@ -28,7 +28,7 @@ body {
   font-weight: bold;
   border: none;
   border-radius: 30px 0 0 30px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, green, darkgreen);
   color: white;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -58,7 +58,7 @@ body {
 #darkModeBtn {
   padding: 10px 20px;
   border-radius: 25px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, green, darkgreen);
   color: white;
   border: none;
   cursor: pointer;
@@ -71,7 +71,7 @@ body {
 #searchInput {
   padding: 10px 15px;
   width: 250px;
-  border: 2px solid #4a00e0;
+  border: 2px solid green;
   border-radius: 20px;
   font-size: 14px;
   margin-bottom: 2rem;
@@ -94,17 +94,18 @@ body {
 
 #currentRoll {
   font-size: 22px;
+  font-family: cursive;
   font-weight: bolder;
   margin: 15px auto;
   padding: 10px;
-  background-color: #ffed51;
+  background-color: #00ff73;
   text-align: center;
   width: fit-content;
-  border-radius: 15px;
+  border-radius: 15px 0 15px 0;
 }
 
 .dark-mode #currentRoll {
-  background-color: #665c00;
+  background-color: #005a06;
 }
 
 .student-list {
@@ -116,7 +117,7 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 10px;
-  background: #f9f9f9;
+  background: #c9ffbd;
   scroll-behavior: smooth;
 }
 
@@ -125,11 +126,11 @@ body {
 }
 
 .highlight {
-  background-color: #d0e7ff;
+  background-color: #6fff62;
 }
 
 .dark-mode .highlight {
-  background-color: #2a3d5c;
+  background-color: rgb(0, 108, 0);
 }
 
 .absent-bar {
@@ -147,7 +148,7 @@ body {
 #copyText,
 #filenamePrefix {
   padding: 10px;
-  border: 2px solid #4a00e0;
+  border: 2px solid green;
   border-radius: 10px;
   min-width: 200px;
   max-width: 100%;
@@ -171,7 +172,7 @@ body {
   padding: 8px 15px;
   border-radius: 8px;
   border: none;
-  background-color: #4a00e0;
+  background-color: green;
   color: white;
   cursor: pointer;
   display: flex;
@@ -185,7 +186,7 @@ button#toggle-btn {
   font-weight: bold;
   border: none;
   border-radius: 30px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(to right, green, darkgreen);
   color: white;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
