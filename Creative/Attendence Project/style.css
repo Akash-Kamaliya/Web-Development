@@ -143,9 +143,16 @@ body {
   max-width: 72%;
   word-break: break-word;
 }
-
+#copyText{
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 10px;
+  min-width: 600px;
+  max-width: 100%;
+  background-color: #fff;
+  overflow-wrap: break-word;
+}
 #absentList,
-#copyText,
 #filenamePrefix {
   padding: 10px;
   border: 2px solid green;
