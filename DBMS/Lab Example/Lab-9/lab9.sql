@@ -9,13 +9,13 @@ SELECT 5 * 30 AS Result;
 SELECT ABS(-25) AS Abs1, ABS(25) AS Abs2, ABS(-50) AS Abs3, ABS(50) AS Abs4;
 -- 3.
 -- Find smallest integer value that is greater than or equal to 25.2, 25.7 and -25.2.
-SELECT CEIL(25.2) AS Ceil1, CEIL(25.7) AS Ceil2, CEIL(-25.2) AS Ceil3;
+SELECT CEILing(25.2) AS Ceiling1, CEILing(25.7) AS Ceiling2, CEILing(-25.2) AS Ceiling3;
 -- 4.
 -- Find largest integer value that is smaller than or equal to 25.2, 25.7 and -25.2.
 SELECT FLOOR(25.2) AS Floor1, FLOOR(25.7) AS Floor2, FLOOR(-25.2) AS Floor3;
 -- 5.
 -- Find out remainder of 5 divided 2 and 5 divided by 3.
-SELECT MOD(5, 2) AS Rem1, MOD(5, 3) AS Rem2;
+SELECT 5%2 AS Rem1, 5%3 AS Rem2;
 -- 6.
 -- Find out value of 3 raised to 2nd power and 4 raised 3rd power.
 SELECT POWER(3, 2) AS Pow1, POWER(4, 3) AS Pow2;
@@ -39,7 +39,7 @@ ROUND(157.732, -2) AS RoundMinus2;
 SELECT EXP(2) AS Exp2, EXP(3) AS Exp3;
 -- 12.
 -- Find out logarithm having base e of 10 and 2.
-SELECT LN(10) AS Ln10, LN(2) AS Ln2;
+SELECT Log(10) AS Ln10, Log(2) AS Ln2;
 -- 13.
 -- Find out logarithm having base b having value 10 of 5 and 100.
 SELECT LOG10(5) AS Log5, LOG10(100) AS Log100;
@@ -80,13 +80,13 @@ SELECT EmpNo, EmpName, Salary, Commission, (Salary + Commission) AS Total_Earnin
 FROM EMP_MASTER;
 -- 2.
 -- Find smallest integer value that is greater than or equal to 55.2, 35.7 and -55.2.
-SELECT CEIL(55.2) AS Ceil1, CEIL(35.7) AS Ceil2, CEIL(-55.2) AS Ceil3;
+SELECT CEILing(55.2) AS Ceiling1, CEILing(35.7) AS Ceiling2, CEILing(-55.2) AS Ceiling3;
 -- 3.
 -- Find largest integer value that is smaller than or equal to 55.2, 35.7 and -55.2.
 SELECT FLOOR(55.2) AS Floor1, FLOOR(35.7) AS Floor2, FLOOR(-55.2) AS Floor3;
 -- 4.
 -- Find out remainder of 55 divided 2 and 55 divided by 3.
-SELECT MOD(55, 2) AS Mod1, MOD(55, 3) AS Mod2;
+SELECT 55%2 AS Mod1,55%3 AS Mod2;
 -- 5.
 -- Find out value of 23 raised to 2nd power and 14 raised 3rd power.
 SELECT POWER(23, 2) AS Pow1, POWER(14, 3) AS Pow2;
@@ -119,9 +119,9 @@ WHERE (Salary + Commission) >= (2 * Salary);
 -- 1.
 -- Find the length of following. (I) NULL (II) ‘ hello ’ (III) Blank
 SELECT 
-    LENGTH(NULL) AS Length_Null,
-    LENGTH(' hello ') AS Length_Hello,
-    LENGTH('') AS Length_Blank;
+    LEN(NULL) AS Len_Null,
+    LEN(' hello ') AS Len_Hello,
+    LEN('') AS Len_Blank;
 -- 2.
 -- Display your name in lower & upper case.
 SELECT 
@@ -171,14 +171,14 @@ RIGHT('SQL Server', 5) AS Last5;
 -- Write a query to convert a string ‘1234.56’ to number (Use cast and convert function).
 -- MySQL
 SELECT CAST('1234.56' AS DECIMAL(10,2)) AS Cast_Number,
-CONVERT('1234.56', DECIMAL(10,2)) AS Convert_Number;
+CONVERT(DECIMAL(10,2) , '1234.56' ) AS Convert_Number;
 -- 12.
 -- Write a query to convert a float 10.58 to integer (Use cast and convert function).
-SELECT CAST(10.58 AS UNSIGNED) AS Cast_Int,
-CONVERT(10.58, UNSIGNED) AS Convert_Int;
+SELECT CAST(10.58 AS INT) AS Cast_Int,
+CONVERT(INT , 10.58 ) AS Convert_Int;
 -- 13.
 -- Put 10 space before your name using function.
-SELECT CONCAT(REPEAT(' ', 10), 'Akash Kamaliya') AS Spaced_Name;
+SELECT CONCAT(REPLICATE(' ', 10), 'Akash Kamaliya') AS Spaced_Name;
 -- 14.
 -- Combine two strings using + sign as well as CONCAT ().
 -- MySQL syntax
@@ -191,16 +191,16 @@ SELECT 'Akash' + ' Kamaliya' AS Using_Plus;
 SELECT REVERSE('Darshan') AS Reversed_Name;
 -- 16.
 -- Repeat your name 3 times.
-SELECT REPEAT('Akash ', 3) AS Repeated_Name;
+SELECT REPLICATE('Akash ', 3) AS Repeated_Name;
 -------------------------------------------------------------------------------------------------------------------------------
 -- Part – B: Perform following queries on EMP_MASTER table.
 -- 1.
--- Find the length of EMP Name and City columns.
+-- Find the len of EMP Name and City columns.
 SELECT 
 EmpName, 
-LENGTH(EmpName) AS EmpName_Length, 
+LEN(EmpName) AS EmpName_Length, 
 City, 
-LENGTH(City) AS City_Length 
+LEN(City) AS City_Length 
 FROM EMP_MASTER;
 -- 2.
 -- Display EMP Name and City columns in lower & upper case.
@@ -236,7 +236,7 @@ FROM EMP_MASTER;
 -- 1.
 -- Put 10 space before EMP Name using function.
 SELECT 
-CONCAT(REPEAT(' ', 10), EmpName) AS Spaced_Name 
+CONCAT(REPLICATE(' ', 10), EmpName) AS Spaced_Name 
 FROM EMP_MASTER;
 -- 2.
 -- Combine EMP Name and city columns using + sign as well as CONCAT ().
@@ -250,7 +250,7 @@ FROM EMP_MASTER;
 -- 3.
 -- Combine all columns using + sign as well as CONCAT ().
 SELECT 
-CONCAT(EmpNo, ' ', EmpName, ' ', DATE_FORMAT(JoiningDate, '%Y-%m-%d'), ' ', Salary, ' ', Commission, ' ', City, ' ', DeptCode) AS Combined_All 
+CONCAT(EmpNo, ' ', EmpName, ' ', DAY(JoiningDate), ' ', Salary, ' ', Commission, ' ', City, ' ', DeptCode) AS Combined_All 
 FROM EMP_MASTER;
 -- 4.
 -- Combine the result as < EMP Name > Lives in <City>.
@@ -319,6 +319,7 @@ DATEPART(MONTH, GETDATE()) AS Month_Number;
 SELECT EOMONTH(GETDATE()) AS Last_Date_Current_Month;
 -- 13.
 -- Calculate your age in years and months.
+SELECT CONCAT((DATEDIFF(YEAR, '2007-08-05', GETDATE())) , '  ' , 'YEARS' , '  ' , (DATEDIFF(MONTH, '2007-08-05', GETDATE()))%12 , '  ' , 'MONTHS' )AS Months_Diff;
 --==============================
 --------------------------------------------------------------------------------------------------------
 -- Part – B: Perform following queries on EMP_MASTER table.

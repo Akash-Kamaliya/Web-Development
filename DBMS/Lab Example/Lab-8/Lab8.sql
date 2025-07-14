@@ -18,7 +18,8 @@ INSERT INTO SALES_DATA (Region, Product, Sales_Amount, Year) VALUES
 ('Europe', 'TV', 1500, 2023),
 ('Asia', 'TV', 1100, 2024),
 ('North America', 'Watch', 1700, 2024);
-
+SELECT *
+FROM SALES_DATA 
 -- Part – A:
 -- 1.
 -- Display Total Sales Amount by Region.
@@ -94,7 +95,6 @@ FROM SALES_DATA
 WHERE Product = 'Mobile' 
 GROUP BY Region 
 ORDER BY SUM(Sales_Amount) 
-LIMIT 1;
 -- 14.
 -- Find the Product with the Highest Sales Across All Regions in 2023.
 SELECT Product 
@@ -102,7 +102,6 @@ FROM SALES_DATA
 WHERE Year = 2023 
 GROUP BY Product 
 ORDER BY SUM(Sales_Amount) DESC 
-LIMIT 1;
 -- 15.
 -- Find Regions Where 'TV' Sales in 2023 Were Greater Than 1000.
 SELECT Region 
@@ -132,7 +131,6 @@ FROM SALES_DATA
 WHERE Year = 2024 
 GROUP BY Region 
 ORDER BY Total_Sales DESC 
-LIMIT 3;
 -- 4.
 -- Display Top 3 Regions by Total Sales Amount in Year 2024
 SELECT Region, SUM(Sales_Amount) AS Total_Sales
@@ -140,14 +138,12 @@ FROM SALES_DATA
 WHERE Year = 2024
 GROUP BY Region
 ORDER BY Total_Sales DESC
-LIMIT 3;
 -- 5.
 -- Find the Year with the Lowest Total Sales Across All Regions.
 SELECT Year 
 FROM SALES_DATA 
 GROUP BY Year 
 ORDER BY SUM(Sales_Amount) ASC 
-LIMIT 1;
 ----------------------------------------------------------------------
 -- Part – C:
 -- 1.
