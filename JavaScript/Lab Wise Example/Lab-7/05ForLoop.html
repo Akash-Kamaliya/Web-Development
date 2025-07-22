@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>for...of Loop Example</title>
+  </head>
+  <body>
+    <h2>Fruits List using for...of Loop:</h2>
+    <ul id="fruitList"></ul>
+
+    <script>
+      const fruits = ["Apple", "Banana", "Mango", "Orange"];
+      const list = document.getElementById("fruitList");
+
+      for (const fruit of fruits) {
+        const listItem = document.createElement("li");
+        listItem.textContent = fruit;
+        list.appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>

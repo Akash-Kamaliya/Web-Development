@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Key Event Handler</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 100px;
+        transition: background-color 0.5s;
+      }
+      #message {
+        font-size: 24px;
+        color: darkgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Press any key</h1>
+    <p id="message">Waiting for key press...</p>
+
+    <script>
+      document.addEventListener("keydown", function (event) {
+        const key = event.key.toLowerCase();
+        const message = document.getElementById("message");
+
+        if (["a", "e", "i", "o", "u"].includes(key)) {
+          message.textContent = `Vowel "${key}" is pressed.`;
+        } else {
+          message.textContent = `Key "${key}" is pressed.`;
+        }
+      });
+
+      document.addEventListener("keyup", function () {
+        document.body.style.backgroundColor = "blue";
+      });
+    </script>
+  </body>
+</html>

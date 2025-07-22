@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Class Example</title>
+  </head>
+  <body>
+    <h2>Check the Console for Output</h2>
+
+    <script>
+      class Student {
+        constructor(name, age, course) {
+          this.name = name;
+          this.age = age;
+          this.course = course;
+        }
+
+        displayInfo() {
+          console.log(`Name: ${this.name}`);
+          console.log(`Age: ${this.age}`);
+          console.log(`Course: ${this.course}`);
+        }
+      }
+
+      const student1 = new Student("Akash", 18, "B.Tech CSE");
+
+      student1.displayInfo();
+    </script>
+  </body>
+</html>

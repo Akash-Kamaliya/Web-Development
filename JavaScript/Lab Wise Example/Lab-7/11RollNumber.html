@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selected Roll Numbers</title>
+  </head>
+  <body>
+    <h2>Select Roll Numbers:</h2>
+
+    <form id="rollForm">
+      <label><input type="checkbox" value="101" /> 101</label><br />
+      <label><input type="checkbox" value="102" /> 102</label><br />
+      <label><input type="checkbox" value="103" /> 103</label><br />
+      <label><input type="checkbox" value="104" /> 104</label><br />
+      <label><input type="checkbox" value="105" /> 105</label><br />
+    </form>
+
+    <h3>Selected Roll Numbers:</h3>
+    <p id="selectedRolls">None</p>
+
+    <script>
+      const form = document.getElementById("rollForm");
+      const output = document.getElementById("selectedRolls");
+
+      form.addEventListener("change", () => {
+        const checkboxes = form.querySelectorAll(
+          "input[type='checkbox']:checked"
+        );
+        const selectedValues = Array.from(checkboxes).map((cb) => cb.value);
+        output.textContent =
+          selectedValues.length > 0 ? selectedValues.join(", ") : "None";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Destructuring Example</title>
+  </head>
+  <body>
+    <h2>Open Console to See Output</h2>
+
+    <script>
+      const colors = ["Red", "Green", "Blue"];
+
+      const [firstColor, secondColor, thirdColor] = colors;
+
+      console.log("Array Destructuring:");
+      console.log("First Color:", firstColor);
+      console.log("Second Color:", secondColor);
+      console.log("Third Color:", thirdColor);
+
+      const student = {
+        name: "Akash",
+        age: 18,
+        course: "B.Tech CSE",
+      };
+
+      const { name, age, course } = student;
+
+      console.log("Object Destructuring:");
+      console.log("Name:", name);
+      console.log("Age:", age);
+      console.log("Course:", course);
+    </script>
+  </body>
+</html>
