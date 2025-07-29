@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery + RegEx Demo</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h2>Email Validator</h2>
+
+    <input type="text" id="email" placeholder="Enter email address" />
+    <button id="checkBtn">Validate</button>
+    <p id="result"></p>
+
+    <script>
+      $(document).ready(function () {
+        $("#checkBtn").click(function () {
+          let email = $("#email").val();
+
+          let regex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+          if (regex.test(email)) {
+            $("#result").text(" Valid Email").css("color", "green");
+          } else {
+            $("#result").text("Invalid Email").css("color", "red");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
