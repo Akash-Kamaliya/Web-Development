@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <img id="myImage" src="image.jpeg" height="500px" alt="Sample Image" style="display:block; margin:20px auto; cursor:pointer;" />
+    <button id="fadeout" style="display:block; margin:20px auto; cursor:pointer;">Fade Out</button>
+    <button id="fadein" style="display:block; margin:20px auto; cursor:pointer;">Fade In</button>
+    <!--  -->
+    <button id="slideup" style="display:block; margin:20px auto; cursor:pointer;">Slide Up</button>
+    <button id="slidedown" style="display:block; margin:20px auto; cursor:pointer;">Slide Down</button>
+    <button id="slidetoggle" style="display:block; margin:20px auto; cursor:pointer;">Slide Toggle</button>
+    <!--  -->
+    <h1 id="heading" style=" text-align: center;">Akash R. Kamaliya</h1>
+    <button id="changetext" style="display:block; margin:20px auto; cursor:pointer;">Change Text</button>
+    <!--  -->
+    <input type="text" id="input" style="display:block; margin:20px auto; cursor:pointer;">
+    <p class="data" style=" text-align: center;">Nothing</p>
+    <button id="gettext" style="display:block; margin:20px auto; cursor:pointer;">Get Text</button>
+    <!--  -->
+    <ul id="ul" style="text-align: center;">
+        <li>hi</li>
+        <li>hello</li>
+    </ul>
+    <button id="appendli" style="display:block; margin:20px auto; cursor:pointer;">Append List</button>
+    <!--  -->
+    <ul id="ul1" style="text-align: center;">
+        <li>hi</li>
+        <li>hello</li>
+    </ul>
+    <input type="text" id="input1" style="display:block; margin:20px auto; cursor:pointer;">
+    <button id="appendli1" style="display:block; margin:20px auto; cursor:pointer;">Append List1</button>
+    <!--  -->
+    <div id="myDiv" style="display: flex; padding: .5rem; background-color: antiquewhite;">
+        <div id="myDiv1" style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+        <div style="width: 50px; height: 50px; margin: 1rem; background-color: blue;"></div>
+    </div>
+    <button id="changecolor" style="display:block; margin:20px auto; cursor:pointer;">Change Color</button>
+    <!--  -->
+    <script>
+        //01 to fade object when clicked on it
+        $(document).ready(function() {
+            $("#fadeout").click(function() {
+                $("#myImage").fadeOut("slow");
+            });
+            $("#fadein").click(function() {
+                $("#myImage").fadeIn("slow");
+            });
+        });
+        //02slide up slide down and slide toggle image with jquery
+        $(document).ready(function() {
+            $("#slideup").click(function() {
+                $("#myImage").slideUp("slow");
+            });
+            $("#slidedown").click(function() {
+                $("#myImage").slideDown("slow");
+            });
+            $("#slidetoggle").click(function() {
+                $("#myImage").slideToggle("slow");
+            });
+        });
+        //03set content of h1 to hello world when user clicked on button
+        $(document).ready(function() {
+            $("#changetext").click(function() {
+                $("#heading").text("Hello world");
+            });
+        });
+        //04to get content of text box and set to paragraph with data class
+        $(document).ready(function() {
+            $("#gettext").click(function() {
+                $(".data").text($("#input").val());
+            });
+        });
+        //05apend newlist item with hello world to existing unorder list when click on button 
+        $(document).ready(function() {
+            $("#appendli").click(function() {
+                $("#ul").append("<li>Hello world</li>");
+            });
+        });
+        //06append new row to existing table when clicked on button
+        $(document).ready(function() {
+            $("#appendli1").click(function() {
+                $("#ul1").append("<li>"+$("#input1").val()+"</li>");
+            });
+        });
+        //07change background color to be red to all the children of div with mydiv id when clicked button
+        $(document).ready(function() {
+            $("#changecolor").click(function() {
+            $("#myDiv").children().css("background-color", "red");
+            });
+        });
+        //08hide all sibling when click on button 
+        $(document).ready(function() {
+            $("#myDiv1").click(function() {
+                $(this).siblings().toggle();
+            });
+        });
+    </script>
+  </body>
+</html>
