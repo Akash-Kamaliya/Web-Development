@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider</title>
+  <style>
+    .Box {
+      height: 500px;
+      width: 500px;
+      overflow: hidden;
+      display: flex;
+      position: relative;
+    }
+
+    .Box img {
+      width: 500px;
+      height: 500px;
+      flex-shrink: 0;
+      transition: transform 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <div class="Box" id="slider">
+    <img src="1.jpg" alt="">
+    <img src="2.jpg" alt="">
+    <img src="3.jpg" alt="">
+    <img src="4.jpg" alt="">
+    <img src="5.jpg" alt="">
+  </div>
+
+  <button onclick="left()">Left</button>
+  <button onclick="right()">Right</button>
+
+  <script>
+    let currentIndex = 0;
+    const slider = document.getElementById("slider");
+    const totalImages = slider.children.length;
+
+    function updateSlider() {
+      slider.style.transform = `translateX(-${currentIndex * 500}px)`;
+    }
+
+    function left() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalImages - 1;
+      }
+      updateSlider();
+    }
+
+    function right() {
+      if (currentIndex < totalImages - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
+      }
+      updateSlider();
+    }
+  </script>
+</body>
+</html>
