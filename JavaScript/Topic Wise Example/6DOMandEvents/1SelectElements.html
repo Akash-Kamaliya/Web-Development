@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Select Elements</title></head>
+<body>
+<h3>Select Elements Demo - open in browser and check console</h3>
+<div id="app">Hello</div>
+<script>
+// selectElements.js - document selectors demo
+const elById = document.getElementById('app');
+console.log('byId', elById);
+
+const elQuery = document.querySelector('#app');
+console.log('querySelector', elQuery);
+
+const allDivs = document.querySelectorAll('div');
+console.log('allDivs length', allDivs.length);
+</script>
+</body>
+</html>

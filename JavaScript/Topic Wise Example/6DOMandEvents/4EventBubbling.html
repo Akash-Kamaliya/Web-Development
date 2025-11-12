@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Event Bubbling</title></head>
+<body>
+<div id="outer" style="padding:20px;border:1px solid black">
+    Outer
+    <div id="inner" style="padding:10px;border:1px solid red">Inner</div>
+</div>
+<script>
+document.getElementById('outer').addEventListener('click', ()=> console.log('outer clicked'));
+document.getElementById('inner').addEventListener('click', (e)=> {
+    console.log('inner clicked');
+    // e.stopPropagation(); // uncomment to stop bubbling
+});
+</script>
+</body></html>
