@@ -1,0 +1,5 @@
+Node Js/FigletDirectory/node_modules
+Node Js/Underscore/node_modules
+Node Js/Axios/node_modules
+# this folder contains lots of node_modules files and folder thats why i just git ignore this folder
+# If you want to know about what are the node_modules exist in this folder you can check package.json
